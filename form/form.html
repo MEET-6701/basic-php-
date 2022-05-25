@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title> Login in form</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+    </head>
+
+    <body>
+        <div class="modal-body">
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Name" name="name" id="recipient-rname" required="">
+                </div>
+                <div class="form-group">
+                    <label for="recipient-email" class="col-form-label">Email</label>
+                    <input type="text" class="form-control" placeholder="User Name" name="user_name" id="recipient-email" required="">
+                </div>
+                <div class="form-group">
+                    <label for="password1" class="col-form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="Password" name="password" id="password1" required="">
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender" class="col-form-label">Gender</label>
+                    <input type="radio" name="gen" value="Male">:Male
+                    <input type="radio" name="gen" value="Female">:Female
+                </div>
+                <div class="form-group">
+                    <label for="gender" class="col-form-label">Laungauges</label>
+                    <input type="checkbox" name="lag[]" value="Hindi">:Hindi
+                    <input type="checkbox" name="lag[]" value="English">:English
+                    <input type="checkbox" name="lag[]" value="Gujarati">:Gujarati
+                </div>
+                <div class="form-group">
+                    <label for="password1" class="col-form-label">Select Country</label>
+                    <select class="form-control" name="cid" required="">
+                        <option value="">------  Select Country ------</option>
+                        <?php
+                        foreach($country_arr as $d)
+                        {
+                        ?>
+                        <option value="<?php echo $d->cid?>"><?php echo $d->cnm?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="password1" class="col-form-label">Upload Pic</label>
+                    <input type="file" class="form-control" name="img" required="">
+                </div>
+                <div class="right-w3l">
+                    <input type="submit" name="submit" class="form-control" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+            </div>
+            
+        </div>
+        
+    </div>
+            
+</div>
+</section>
+    </body>
+</html>
